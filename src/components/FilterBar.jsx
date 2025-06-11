@@ -78,7 +78,7 @@ export default function FilterBar({
           )}
         </div>
 
-        {/* Category button group */}
+        {/* Category button group*/}
         {showCategories && (
           <Categories
             categories={categories}
