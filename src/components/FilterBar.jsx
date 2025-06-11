@@ -80,22 +80,11 @@ export default function FilterBar({
 
         {/* Category button group */}
         {showCategories && (
-          <div className="w-full flex justify-between items-center rounded-md">
-            {categories.map(({ id, category_name }) => (
-              <button
-                key={`cat-${id}-${category_name}`}
-                onClick={() => setActiveCategory(category_name)}
-                className={`pb-2 border-b-4 mr-1 ml-1 ${
-                  activeCategory === category_name
-                    ? "border-green w-1/2 font-bold text-green"
-                    : "border-gray-900 w-1/2 text-gray-900 hover:text-green"
-                }`}
-                type="button"
-              >
-                {category_name}
-              </button>
-            ))}
-          </div>
+          <Categories
+            categories={categories}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+          />
         )}
 
         {/* Sub-category button group */}
